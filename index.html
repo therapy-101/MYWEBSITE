@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKIBLOOM | Psychotherapy & Counselling Lucknow</title>
+  <meta name="description" content="Evidence-based psychotherapy, cognitive behavioral therapy, and mental health counselling in Lucknow by expert therapists.">
+  
+  <!-- Premium Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #FFFDD0;
+      --text-main: #5C4033;
+      --text-muted: #7A5B4D;
+      --teal-accent: #2C5E58;
+      --teal-light: #3A7871;
+      --teal-glow: rgba(44, 94, 88, 0.28);
+      --purple-accent: #7A698D;
+      --purple-glow: rgba(122, 105, 141, 0.25);
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(92, 64, 51, 0.16);
+      --border-color: rgba(92, 64, 51, 0.16);
+      --shadow-sm: 0 4px 14px rgba(92, 64, 51, 0.05);
+      --shadow-md: 0 12px 28px rgba(92, 64, 51, 0.09);
+      --shadow-lg: 0 20px 45px rgba(44, 94, 88, 0.14);
+      --shadow-float: 0 15px 35px rgba(0, 0, 0, 0.16);
+      --transition-smooth: 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    ::selection {
+      background: var(--teal-accent);
+      color: #FFFDD0;
+    }
+
+    /* Refined Animated Fade & Parallax Reveal */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(32px) scale(0.985);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Glassmorphism Header */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 6%; background: rgba(255, 253, 208, 0.94);
+      position: sticky; top: 0; z-index: 90; 
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(92, 64, 51, 0.04);
+      transition: var(--transition-smooth);
+    }
+    .brand-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-img { height: 46px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(44,94,88,0.15)); transition: transform 0.4s ease; }
+    .brand-container:hover .logo-img { transform: rotate(-5deg) scale(1.05); }
+    
+    .brand-text { display: flex; flex-direction: column; }
+    .website-name { 
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; 
+      color: var(--teal-accent);
+      line-height: 1; 
+    }
+    .tagline { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.8px; color: var(--text-main); font-weight: 600; margin-top: 4px; }
+
+    .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+    .nav-links a { 
+      color: var(--text-main); text-decoration: none; 
+      font-weight: 600; font-size: 0.92rem; cursor: pointer; transition: var(--transition-smooth);
+      position: relative; padding: 4px 0;
+    }
+    .nav-links a:not(.login-btn)::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--teal-accent), var(--purple-accent));
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 2px;
+    }
+    .nav-links a:not(.login-btn):hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--teal-accent); }
+
+    .login-btn {
+      padding: 0.55rem 1.35rem; border: 1.5px solid var(--teal-accent);
+      border-radius: 50px; color: var(--teal-accent); text-decoration: none; display: inline-block;
+      font-weight: 700; letter-spacing: 0.3px; background: rgba(44, 94, 88, 0.05);
+      box-shadow: 0 2px 8px rgba(44, 94, 88, 0.08); transition: var(--transition-smooth);
+    }
+    .login-btn:hover { 
+      background: var(--teal-accent); color: #FFFDD0; 
+      box-shadow: 0 6px 18px var(--teal-glow); transform: translateY(-2px);
+    }
+
+    .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; z-index: 101; }
+    .menu-toggle span { width: 26px; height: 3px; background: var(--text-main); border-radius: 4px; transition: 0.3s; }
+
+    /* Authentication Drawers & Overlay */
+    .auth-panel {
+      position: fixed; top: 0; right: -100%;
+      width: 400px; max-width: 90%; height: 100%;
+      background: #FFFFFF;
+      color: var(--text-main); box-shadow: -10px 0 35px rgba(0,0,0,0.15);
+      z-index: 1000; padding: 3rem 2.2rem;
+      display: flex; flex-direction: column; transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+    .auth-panel.active { right: 0; }
+    .close-panel { align-self: flex-end; font-size: 2rem; cursor: pointer; color: var(--text-muted); line-height: 1; transition: 0.2s; }
+    .close-panel:hover { color: var(--teal-accent); transform: rotate(90deg); }
+    .auth-panel h2 { 
+      font-family: 'Playfair Display', serif; font-size: 1.8rem;
+      color: var(--teal-accent); margin-bottom: 0.4rem; 
+    }
+    .auth-panel p.subtitle { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.8rem; }
+    .auth-panel input, .auth-panel select { 
+      border: 1.5px solid var(--border-color); background: #FFFDD0; color: var(--text-main);
+      padding: 0.85rem 1rem; width: 100%; margin-bottom: 1.1rem; border-radius: 8px; 
+      transition: var(--transition-smooth);
+    }
+    .auth-panel input:focus, .auth-panel select:focus {
+      border-color: var(--teal-accent); outline: none; background: #FFF;
+      box-shadow: 0 0 0 4px var(--teal-glow);
+    }
+
+    #panelOverlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(44, 94, 88, 0.3); backdrop-filter: blur(6px);
+      z-index: 999; opacity: 0; visibility: hidden; transition: var(--transition-smooth);
+    }
+    #panelOverlay.active { opacity: 1; visibility: visible; }
+
+    section { padding: 5.5rem 10%; border-bottom: 1px solid var(--border-color); position: relative; }
+    h2 { 
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem; margin-bottom: 1rem; letter-spacing: 0.5px; 
+      color: var(--teal-accent); font-weight: 700; 
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 0; position: relative; min-height: 85vh;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .hero-container {
+      width: 100%; height: 100%; min-height: 85vh; position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    .hero-image img { 
+      width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+      transform: scale(1.03); transition: transform 8s ease;
+    }
+    .hero-section:hover .hero-image img { transform: scale(1.08); }
+    
+    .hero-content {
+      position: relative; z-index: 2; width: 88%; max-width: 920px; padding: 4rem 3.5rem; margin: 3.5rem 0;
+      background: rgba(255, 253, 208, 0.78); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px; box-shadow: 0 25px 50px rgba(92, 64, 51, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6); 
+      border: 1px solid rgba(255, 255, 255, 0.6); text-align: center;
+      transition: var(--transition-smooth);
+    }
+    .hero-content:hover { transform: translateY(-4px); box-shadow: 0 30px 60px rgba(92, 64, 51, 0.2); }
+    .hero-content h1 { 
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem; line-height: 1.15; color: var(--teal-accent); margin-bottom: 0.6rem; font-weight: 800; 
+    }
+    .hero-content h2 { 
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.5rem; font-weight: 600; letter-spacing: normal; 
+    }
+    .hero-content h3 { 
+      font-size: 1.15rem; color: var(--purple-accent); margin-bottom: 1.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; 
+    }
+    .hero-content blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem; line-height: 1.7; font-style: italic; color: var(--text-main);
+      border-top: 2px solid var(--teal-accent); padding-top: 1.4rem;
+      margin: 0 auto; max-width: 780px; font-weight: 500;
+    }
+
+    /* Profile Section Cards */
+    .profile-section-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center; }
+    .profile-info h3 { 
+      font-family: 'Playfair Display', serif; font-size: 2.1rem; 
+      color: var(--teal-accent); margin-bottom: 0.3rem; 
+    }
+    .profile-info .role-badge { 
+      display: inline-block; background: linear-gradient(135deg, var(--purple-accent), var(--teal-accent)); 
+      color: white; padding: 6px 16px; border-radius: 30px; font-size: 0.78rem; font-weight: 700; 
+      letter-spacing: 0.5px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px var(--purple-glow);
+    }
+    .profile-info p { margin-bottom: 1rem; color: var(--text-main); font-size: 0.98rem; }
+    .profile-info strong { color: var(--text-main); }
+
+    .profile-auth-box {
+      background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: 18px;
+      padding: 1.8rem; margin-top: 2rem; box-shadow: var(--shadow-md); backdrop-filter: blur(10px);
+      transition: var(--transition-smooth);
+    }
+    .profile-auth-box:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .profile-auth-box h4 { font-size: 1.2rem; color: var(--teal-accent); margin-bottom: 0.3rem; font-weight: 700; }
+    .profile-auth-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+    .profile-auth-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    
+    .btn-auth {
+      flex: 1; min-width: 130px; padding: 0.85rem 1.2rem; border-radius: 50px;
+      font-weight: 700; font-size: 0.86rem; text-align: center; cursor: pointer;
+      transition: var(--transition-smooth); border: none; text-transform: uppercase;
+      letter-spacing: 0.8px; text-decoration: none; display: inline-block;
+    }
+    .btn-signup { 
+      background: linear-gradient(135deg, var(--teal-accent), var(--teal-light)); 
+      color: #FFFDD0; box-shadow: 0 4px 14px var(--teal-glow); 
+    }
+    .btn-signup:hover { 
+      background: linear-gradient(135deg, var(--purple-accent), var(--teal-accent)); 
+      transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 20px var(--purple-glow); 
+    }
+    .btn-signin { 
+      background: transparent; border: 1.5px solid var(--teal-accent); color: var(--teal-accent); 
+    }
+    .btn-signin:hover { 
+      background: var(--teal-accent); color: #FFFDD0; transform: translateY(-2px) scale(1.02); 
+    }
+
+    /* Enhanced Gallery Image Slider */
+    .gallery-slider-wrapper { max-width: 960px; margin: 2.5rem auto 0 auto; }
+    .gallery-slider-container {
+      position: relative; width: 100%; height: 480px; overflow: hidden; border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(92, 64, 51, 0.16); border: 1.5px solid var(--border-color); 
+      background: #EAE6D6;
+    }
+    .gallery-slides { display: flex; width: 400%; height: 100%; transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1); }
+    .gallery-slide { width: 25%; height: 100%; position: relative; overflow: hidden; }
+    .gallery-slide img { 
+      width: 100%; height: 100%; object-fit: cover; display: block; 
+      transition: transform 1.2s ease; 
+    }
+    .gallery-slider-container:hover .gallery-slide img { transform: scale(1.04); }
+    .gallery-slide-caption {
+      position: absolute; bottom: 0; left: 0; width: 100%;
+      background: linear-gradient(0deg, rgba(44, 94, 88, 0.95) 0%, rgba(44, 94, 88, 0.7) 60%, transparent 100%);
+      color: #FFFDD0; padding: 2.5rem 2rem 3rem 2rem; text-align: center;
+      backdrop-filter: blur(4px);
+    }
+    .gallery-slide-caption h4 { 
+      font-family: 'Playfair Display', serif; font-size: 1.45rem; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: 0.5px;
+    }
+    .gallery-slide-caption p { font-size: 0.95rem; opacity: 0.9; max-width: 650px; margin: 0 auto; color: #FFFDD0; }
+
+    .gallery-nav-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255, 253, 208, 0.9); color: var(--teal-accent); border: none;
+      width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+      z-index: 10; transition: var(--transition-smooth); backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(92, 64, 51, 0.15);
+    }
+    .gallery-nav-btn:hover { 
+      background: var(--teal-accent); color: #FFFDD0; transform: translateY(-50%) scale(1.12); 
+    }
+    .gallery-prev { left: 20px; }
+    .gallery-next { right: 20px; }
+
+    .gallery-slider-dots { position: absolute; bottom: 18px; width: 100%; display: flex; justify-content: center; gap: 10px; z-index: 10; }
+    .gallery-dot { 
+      width: 10px; height: 10px; background: rgba(255,255,255,0.55); border-radius: 50%; 
+      cursor: pointer; transition: var(--transition-bounce); 
+    }
+    .gallery-dot.active { background: #FFFDD0; transform: scale(1.4); width: 24px; border-radius: 10px; }
+
+    /* Cards Grid System */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .card {
+      background: var(--card-bg); color: var(--text-main); padding: 2.4rem 2rem; border-radius: 18px;
+      border: 1.5px solid var(--card-border); box-shadow: var(--shadow-sm); backdrop-filter: blur(10px);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+      display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--teal-accent), var(--purple-accent));
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .card:hover { 
+      transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: rgba(44, 94, 88, 0.3); 
+    }
+    .card:hover::before { opacity: 1; }
+    .card h3 { 
+      font-family: 'Playfair Display', serif; color: var(--teal-accent); margin-bottom: 0.4rem; font-size: 1.35rem; 
+    }
+    .card .date { font-size: 0.82rem; font-weight: 700; color: var(--purple-accent); margin-bottom: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .therapist-actions { display: flex; gap: 12px; margin-top: 1.5rem; }
+    .btn-contact-sm {
+      flex: 1; text-align: center; padding: 0.65rem 0.9rem; border-radius: 50px;
+      font-size: 0.84rem; font-weight: 700; text-decoration: none; transition: var(--transition-smooth);
+      box-shadow: 0 2px 8px rgba(92, 64, 51, 0.06);
+    }
+    .btn-wa { background: #25D366; color: white; }
+    .btn-wa:hover { background: #20BA5A; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35); }
+    .btn-email { background: var(--teal-accent); color: white; }
+    .btn-email:hover { background: var(--purple-accent); transform: translateY(-2px); box-shadow: 0 4px 14px var(--purple-glow); }
+
+    /* Pricing Section */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2.2rem; margin-top: 2.5rem; }
+    .price-card {
+      background: var(--card-bg); border-radius: 22px; padding: 2.6rem 2rem;
+      border: 1.5px solid var(--card-border); position: relative;
+      display: flex; flex-direction: column; justify-content: space-between;
+      backdrop-filter: blur(10px); box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+    .price-card:hover { transform: translateY(-10px); border-color: var(--teal-accent); box-shadow: var(--shadow-lg); }
+    .price-card.featured { 
+      border: 2px solid var(--teal-accent); 
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 253, 208, 0.7) 100%); 
+      box-shadow: 0 10px 30px var(--teal-glow);
+    }
+    .badge {
+      position: absolute; top: -14px; right: 24px; 
+      background: linear-gradient(135deg, var(--teal-accent), var(--purple-accent));
+      color: #FFFDD0; padding: 5px 14px; border-radius: 30px; font-size: 0.75rem; 
+      font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+      box-shadow: 0 4px 12px var(--teal-glow);
+    }
+    .price-amount { 
+      font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 800; 
+      color: var(--purple-accent); margin: 0.9rem 0 1.3rem 0; line-height: 1; 
+    }
+    .price-amount span { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
+    .price-features { list-style: none; margin-bottom: 2rem; }
+    .price-features li { font-size: 0.92rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 10px; color: var(--text-main); }
+    .price-features li::before { content: "✓"; color: var(--teal-accent); font-weight: 900; }
+    
+    .btn-select-plan {
+      display: block; text-align: center; padding: 0.85rem; border-radius: 50px;
+      background: var(--teal-accent); color: #FFFDD0; font-weight: 700;
+      text-decoration: none; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 1px; 
+      transition: var(--transition-smooth); box-shadow: 0 4px 12px var(--teal-glow);
+    }
+    .btn-select-plan:hover { 
+      background: var(--purple-accent); transform: translateY(-2px); 
+      box-shadow: 0 6px 18px var(--purple-glow); 
+    }
+
+    .demo-meet-card {
+      background: linear-gradient(135deg, var(--teal-accent) 0%, #1D433E 50%, var(--purple-accent) 100%);
+      color: #FFFDD0; border-radius: 22px; padding: 3.2rem 2.5rem; text-align: center; margin-top: 3.5rem;
+      box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+    }
+    .demo-meet-card::after {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .demo-meet-card h3 { font-family: 'Playfair Display', serif; font-size: 2.1rem; color: #FFFDD0; margin-bottom: 0.8rem; }
+    .demo-meet-card p { color: #FFFDD0; }
+    .btn-meet {
+      display: inline-flex; align-items: center; gap: 10px; background: #FFFDD0;
+      color: var(--teal-accent); padding: 0.95rem 2.4rem; border-radius: 50px;
+      font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15); transition: var(--transition-smooth);
+    }
+    .btn-meet:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+
+    /* Intake & Form Section */
+    .form-wrapper {
+      background: var(--card-bg); border: 1.5px solid var(--card-border);
+      border-radius: 22px; padding: 3rem; box-shadow: var(--shadow-md);
+      max-width: 780px; margin: 2rem auto 0 auto; backdrop-filter: blur(12px);
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+    .form-group-full { grid-column: span 2; }
+    .input-label { font-size: 0.85rem; font-weight: 700; color: var(--teal-accent); margin-bottom: 0.5rem; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+    input, textarea, select {
+      width: 100%; padding: 0.95rem 1.1rem; background: #FFFDD0; border: 1.5px solid var(--border-color);
+      color: var(--text-main); border-radius: 10px; font-size: 0.95rem; font-family: inherit;
+      transition: var(--transition-smooth);
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--teal-accent); background: #FFF; outline: none;
+      box-shadow: 0 0 0 4px var(--teal-glow);
+    }
+    button, .submit-btn {
+      padding: 1.05rem 2.4rem; background: linear-gradient(135deg, var(--teal-accent), var(--teal-light)); 
+      color: #FFFDD0; border: none; font-weight: 800; border-radius: 50px; cursor: pointer; text-transform: uppercase;
+      letter-spacing: 1px; transition: var(--transition-smooth); box-shadow: 0 4px 16px var(--teal-glow);
+    }
+    button:hover, .submit-btn:hover { 
+      background: linear-gradient(135deg, var(--purple-accent), var(--teal-accent)); 
+      transform: translateY(-2px); box-shadow: 0 8px 22px var(--purple-glow);
+    }
+
+    /* 2-Column Split Footer */
+    footer { 
+      padding: 4.5rem 10% 4rem 10%; 
+      background: rgba(255, 253, 208, 0.98); 
+      border-top: 1.5px solid var(--border-color); 
+      box-shadow: inset 0 2px 10px rgba(92, 64, 51, 0.02);
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .footer-left .brand-container {
+      margin-bottom: 0.2rem;
+    }
+    .footer-desc {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.7;
+      max-width: 420px;
+    }
+    .footer-nav-links {
+      display: flex;
+      gap: 1.4rem;
+      list-style: none;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .footer-nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: var(--transition-smooth);
+    }
+    .footer-nav-links a:hover {
+      color: var(--teal-accent);
+      text-decoration: underline;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1.5px solid var(--card-border);
+      border-radius: 18px;
+      padding: 2rem 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .footer-right h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--teal-accent);
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      border-bottom: 1.5px solid rgba(44, 94, 88, 0.2);
+      padding-bottom: 0.5rem;
+    }
+    .footer-contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+    .footer-contact-item strong {
+      color: var(--teal-accent);
+      min-width: 70px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-contact-item a {
+      color: var(--text-main);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      font-weight: 500;
+    }
+    .footer-contact-item a:hover {
+      color: var(--teal-accent);
+      text-decoration: underline;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px dashed var(--border-color);
+    }
+    .footer-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .footer-btn-wa {
+      background: #25D366;
+      color: #FFFFFF;
+    }
+    .footer-btn-wa:hover {
+      background: #20BA5A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+    .footer-btn-li {
+      background: #0A66C2;
+      color: #FFFFFF;
+    }
+    .footer-btn-li:hover {
+      background: #084e96;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+    }
+
+    /* Floating Action System */
+    .floating-container {
+      position: fixed; bottom: 28px; right: 28px; display: flex; flex-direction: column;
+      align-items: flex-end; gap: 14px; z-index: 1000;
+    }
+
+    .float-btn {
+      width: 60px; height: 60px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; box-shadow: var(--shadow-float);
+      cursor: pointer; transition: transform var(--transition-bounce), box-shadow var(--transition-smooth);
+      text-decoration: none; border: none; position: relative;
+    }
+    .float-btn:hover {
+      transform: scale(1.12) translateY(-2px);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.24);
+    }
+
+    .float-whatsapp { background: #25D366; }
+    .float-whatsapp svg { width: 34px; height: 34px; fill: #FFFFFF; }
+
+    .float-ai { 
+      background: linear-gradient(135deg, var(--teal-accent), var(--purple-accent)); 
+    }
+    .float-ai svg { width: 32px; height: 32px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+    .ai-badge-pulse {
+      position: absolute; top: 2px; right: 2px; width: 14px; height: 14px;
+      background: #FF5252; border: 2.5px solid #FFF; border-radius: 50%;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(255, 82, 82, 0); }
+      100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255, 82, 82, 0); }
+    }
+
+    /* AI Chat Window Modal */
+    .ai-chat-card {
+      position: fixed; bottom: 105px; right: 28px; width: 370px; max-width: calc(100vw - 56px);
+      height: 520px; max-height: calc(100vh - 130px); background: #FFFFFF;
+      border-radius: 22px; box-shadow: 0 25px 50px rgba(92, 64, 51, 0.22); border: 1.5px solid var(--border-color);
+      display: none; flex-direction: column; overflow: hidden; z-index: 1001;
+      transform-origin: bottom right;
+      animation: chatPop 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ai-chat-card.open { display: flex; }
+
+    @keyframes chatPop {
+      from { opacity: 0; transform: scale(0.85) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .ai-chat-header {
+      background: linear-gradient(135deg, var(--teal-accent), var(--purple-accent));
+      color: #FFFDD0; padding: 1.1rem 1.4rem; display: flex; align-items: center; justify-content: space-between;
+    }
+    .ai-header-brand { display: flex; align-items: center; gap: 12px; }
+    .ai-header-logo {
+      width: 36px; height: 36px; background: #FFFDD0; border-radius: 50%;
+      padding: 5px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .ai-header-info h4 { font-size: 0.98rem; font-weight: 700; line-height: 1.2; color: #FFFDD0; }
+    .ai-header-info span { font-size: 0.72rem; color: #FFFDD0; opacity: 0.85; }
+    .ai-close-btn {
+      background: none; border: none; color: #FFFDD0; font-size: 1.6rem; cursor: pointer; line-height: 1; padding: 0;
+      transition: 0.2s;
+    }
+    .ai-close-btn:hover { transform: scale(1.15) rotate(90deg); }
+
+    .ai-chat-messages {
+      flex: 1; padding: 1.2rem; overflow-y: auto; background: #FFFDD0;
+      display: flex; flex-direction: column; gap: 14px; font-size: 0.9rem;
+    }
+    .ai-msg {
+      max-width: 82%; padding: 0.75rem 1rem; border-radius: 16px; line-height: 1.45;
+      animation: msgFadeIn 0.3s ease;
+    }
+    @keyframes msgFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .ai-msg.bot {
+      background: #FFFFFF; color: var(--text-main); align-self: flex-start;
+      border-bottom-left-radius: 4px; border: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(92, 64, 51, 0.04);
+    }
+    .ai-msg.user {
+      background: linear-gradient(135deg, var(--teal-accent), var(--teal-light));
+      color: #FFFDD0; align-self: flex-end; border-bottom-right-radius: 4px;
+      box-shadow: 0 4px 12px var(--teal-glow);
+    }
+
+    .ai-chat-input-row {
+      display: flex; padding: 0.85rem; background: #FFFFFF;
+      border-top: 1px solid var(--border-color); gap: 8px;
+    }
+    .ai-chat-input-row input {
+      flex: 1; padding: 0.65rem 0.95rem; border-radius: 50px;
+      border: 1.5px solid var(--border-color); font-size: 0.88rem; background: #FFFDD0; color: var(--text-main);
+    }
+    .ai-chat-input-row input:focus { background: #FFF; border-color: var(--teal-accent); }
+    .ai-send-btn {
+      padding: 0.65rem 1.2rem; border-radius: 50px; font-size: 0.82rem;
+      background: var(--teal-accent); color: #FFFDD0; border: none;
+      font-weight: 700; cursor: pointer; transition: var(--transition-smooth);
+    }
+    .ai-send-btn:hover { background: var(--purple-accent); transform: scale(1.05); }
+
+    @media (max-width: 900px) {
+      .menu-toggle { display: flex; }
+      .nav-links { 
+        display: none; flex-direction: column; position: absolute; top: 100%; left: 0; 
+        width: 100%; background: #FFFDD0;
+        padding: 2rem; border-bottom: 1px solid var(--border-color); box-shadow: var(--shadow-md);
+      }
+      .nav-links.active { display: flex; }
+      .hero-content { width: 92%; padding: 2.5rem 1.6rem; }
+      .hero-content h1 { font-size: 2.3rem; }
+      .profile-section-grid { grid-template-columns: 1fr; }
+      .gallery-slider-container { height: 340px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group-full { grid-column: span 1; }
+      .footer-content { grid-template-columns: 1fr; gap: 2.5rem; }
+      .floating-container { bottom: 20px; right: 20px; }
+      .ai-chat-card { right: 16px; bottom: 95px; width: calc(100vw - 32px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="panelOverlay" onclick="closeAllModals()"></div>
+
+  <!-- Sign In Drawer -->
+  <div id="loginPanel" class="auth-panel">
+    <div class="close-panel" onclick="toggleLoginPanel()">&times;</div>
+    <h2>Client Sign In</h2>
+    <p class="subtitle">Access your therapy portal and session dashboard.</p>
+    <form id="signInForm">
+      <input type="email" id="loginEmail" placeholder="Registered Email Address" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="submit-btn" style="width:100%;">Sign In & Go to Dashboard</button>
+    </form>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+      New client? <a href="javascript:void(0)" onclick="switchToSignUp()" style="color:var(--teal-accent); font-weight:bold;">Create an account</a>
+    </p>
+  </div>
+
+  <!-- Sign Up Drawer -->
+  <div id="signUpPanel" class="auth-panel">
+    <div class="close-panel" onclick="toggleSignUpPanel()">&times;</div>
+    <h2>New Client Registration</h2>
+    <p class="subtitle">Create your confidential account to get started.</p>
+    <form id="signUpForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email Address" required>
+      <input type="tel" id="regPhone" placeholder="Phone Number" required>
+      <select id="regMode" required>
+        <option value="" disabled selected>Preferred Consultation Mode</option>
+        <option value="Online Consultation">Online Consultation</option>
+        <option value="In-Clinic (Lucknow)">In-Clinic (Lucknow)</option>
+        <option value="Hybrid Therapy">Hybrid Therapy</option>
+      </select>
+      <input type="password" id="regPassword" placeholder="Create Password (min 6 characters)" required minlength="6">
+      <button type="submit" class="submit-btn" style="width:100%;">Create Account & Enter Dashboard</button>
+    </form>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+      Already registered? <a href="javascript:void(0)" onclick="switchToSignIn()" style="color:var(--teal-accent); font-weight:bold;">Sign In</a>
+    </p>
+  </div>
+
+  <!-- Header strictly containing Home, Gallery, LinkedIn, Contact, and Client Dashboard -->
+  <header>
+    <div class="brand-container">
+      <svg class="logo-img" viewBox="0 0 100 100" fill="none">
+        <path d="M50 85 C30 85 20 65 25 45 C35 55 45 65 50 85 Z" fill="#2C5E58" opacity="0.85"/>
+        <path d="M50 85 C70 85 80 65 75 45 C65 55 55 65 50 85 Z" fill="#2C5E58" opacity="0.85"/>
+        <path d="M50 85 C35 60 30 35 45 20 C50 35 52 55 50 85 Z" fill="#7A698D" opacity="0.9"/>
+      </svg>
+      <div class="brand-text">
+        <div class="website-name" style="color:var(--teal-accent);">IKIBLOOM</div>
+        <div class="tagline">Psychotherapy & Counselling</div>
+      </div>
+    </div>
+    <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+    
+    <ul class="nav-links" id="nav-list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="linkedin.html">LinkedIn</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="authNavItem"><a href="javascript:void(0)" onclick="toggleLoginPanel()" class="login-btn">Client Portal</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section fade-in-section">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="img1 (1).png" alt="IKIBLOOM Therapy Session Banner">
+      </div>
+      <div class="hero-content">
+        <h1>Welcome to IKIBLOOM.</h1>
+        <h2>Professional Psychotherapy &amp; Counseling Team</h2>
+        <h3>Evidence-Based Behavioral Analysis &amp; Clinical Interventions</h3>
+        <blockquote>
+          "Decoding human behavior at the intersection of mind, environment, and action. Providing specialized psychotherapy, cognitive behavioral interventions, and mental health support."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section id="aryan-profile" class="fade-in-section">
+    <div class="profile-section-grid">
+      <div class="profile-info">
+        <span class="role-badge">Lead Specialist & Founder</span>
+        <h3>Aryan Khare</h3>
+        <p><strong>Behavioral Specialist & Psychotherapy Practitioner</strong></p>
+        <p>Holding an MA in Psychology from National Post Graduate College, Lucknow, Aryan specializes in identifying cognitive distortions and constructing systematic behavior modification blueprints.</p>
+        
+        <div class="profile-auth-box" id="profileAuthContainer">
+          <h4>Client Portal Access</h4>
+          <p>Register or sign in to track your appointments and access personalized session notes.</p>
+          <div class="profile-auth-btns">
+            <button class="btn-auth btn-signup" onclick="toggleSignUpPanel()">Sign Up</button>
+            <button class="btn-auth btn-signin" onclick="toggleLoginPanel()">Sign In</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 0;">
+        <h3 style="color: var(--teal-accent); margin-bottom: 0.8rem;">Clinical Philosophy</h3>
+        <p style="margin-bottom: 1rem;">Our practice is grounded in cognitive-behavioral principles, tailored mindfulness, and compassionate empirical support. Every intervention is designed to empower individuals with sustainable psychological coping mechanisms.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Focus areas include mood stabilization, trauma recovery, executive stress management, and relationship dynamics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Foundation & Experience -->
+  <section id="about" class="fade-in-section">
+    <h2>Academic Foundation & Clinical Experience</h2>
+    <p style="margin-bottom: 1.5rem; color: var(--text-main);">Operating on rigorous empirical inquiry and systematic behavioral interventions.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Nur Manzil Psychiatric Centre</h3>
+        <div class="date">Clinical Training &amp; Intern</div>
+        <p>Observed psychiatric diagnostics, patient case histories, and psychotherapeutic treatments under senior psychiatrists.</p>
+      </div>
+      <div class="card">
+        <h3>Sambal Hospital Lucknow</h3>
+        <div class="date">De-addiction &amp; Mental Health Unit</div>
+        <p>Conducted behavioral assessments and assisted in rehabilitation plans for substance dependence and behavioral addictions.</p>
+      </div>
+      <div class="card">
+        <h3>Psychological Research</h3>
+        <div class="date">Empirical Analysis</div>
+        <p>Authored studies on cognitive distortions, emotional regulation strategies, and environmental stress impacts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Image Slider Section -->
+  <section id="gallery" class="fade-in-section">
+    <h2>Clinical &amp; Professional Gallery</h2>
+    <p style="margin-bottom: 1.5rem; color: var(--text-main);">A visual glimpse into our professional clinical settings, institutional training, and workshops.</p>
+    
+    <div class="gallery-slider-wrapper">
+      <div class="gallery-slider-container">
+        <button class="gallery-nav-btn gallery-prev" onclick="prevSlide()" aria-label="Previous Image">&#10094;</button>
+        <button class="gallery-nav-btn gallery-next" onclick="nextSlide()" aria-label="Next Image">&#10095;</button>
+
+        <div class="gallery-slides" id="gallerySlider">
+          <div class="gallery-slide">
+            <img src="a.jpg" alt="Clinical Consultation Session">
+            <div class="gallery-slide-caption">
+              <h4>Clinical Consultation Session</h4>
+              <p>One-on-one personalized psychotherapy in a safe, confidential environment.</p>
+            </div>
+          </div>
+          <div class="gallery-slide">
+            <img src="b.jpg" alt="Nur Manzil Psychiatric Centre">
+            <div class="gallery-slide-caption">
+              <h4>Nur Manzil Psychiatric Training</h4>
+              <p>Clinical diagnostic evaluations and advanced psychotherapeutic observations.</p>
+            </div>
+          </div>
+          <div class="gallery-slide">
+            <img src="c.jpg" alt="Sambal Hospital De-addiction Unit">
+            <div class="gallery-slide-caption">
+              <h4>Sambal Hospital Unit</h4>
+              <p>Rehabilitation strategies and comprehensive behavioral habit modification.</p>
+            </div>
+          </div>
+          <div class="gallery-slide">
+            <img src="d.jpg" alt="Workshops & Seminars">
+            <div class="gallery-slide-caption">
+              <h4>Workshops &amp; Seminars</h4>
+              <p>Community mental health awareness, group resilience coaching, and research presentations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-slider-dots">
+          <span class="gallery-dot active" onclick="setSlide(0)"></span>
+          <span class="gallery-dot" onclick="setSlide(1)"></span>
+          <span class="gallery-dot" onclick="setSlide(2)"></span>
+          <span class="gallery-dot" onclick="setSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multiple Therapists Section -->
+  <section id="therapist" class="fade-in-section">
+    <h2>Meet Our Clinical Team</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Aryan Khare</h3>
+        <p class="date">Lead Specialist (MA Psychology, NPGC Lucknow)</p>
+        <p>Specializes in Cognitive Behavioral Therapy (CBT), rational emotive behavior therapy, and structured client counseling sessions.</p>
+        <div class="therapist-actions">
+          <a href="https://wa.me/917897891395" target="_blank" class="btn-contact-sm btn-wa">WhatsApp</a>
+          <a href="mailto:therapyonthedot101@gmail.com" class="btn-contact-sm btn-email">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dr. Sneha Verma</h3>
+        <p class="date">Senior Clinical Psychologist (M.Phil)</p>
+        <p>Focuses on adolescent counseling, relationship dynamics, trauma-informed care, and holistic anxiety management strategies.</p>
+        <div class="therapist-actions">
+          <a href="https://wa.me/917897891395" target="_blank" class="btn-contact-sm btn-wa">WhatsApp</a>
+          <a href="mailto:therapyonthedot101@gmail.com" class="btn-contact-sm btn-email">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Rohan Kapoor</h3>
+        <p class="date">Behavioral &amp; Addiction Counsellor</p>
+        <p>Experienced in substance rehabilitation management, motivation enhancement therapy, and behavioral habit re-patterning.</p>
+        <div class="therapist-actions">
+          <a href="https://wa.me/917897891395" target="_blank" class="btn-contact-sm btn-wa">WhatsApp</a>
+          <a href="mailto:therapyonthedot101@gmail.com" class="btn-contact-sm btn-email">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Ananya Sharma</h3>
+        <p class="date">Counseling Psychologist (M.Sc. Clinical Psychology)</p>
+        <p>Specializes in stress management, work-life balance, mindfulness-based cognitive therapies, and personal development coaching.</p>
+        <div class="therapist-actions">
+          <a href="https://wa.me/917897891395" target="_blank" class="btn-contact-sm btn-wa">WhatsApp</a>
+          <a href="mailto:therapyonthedot101@gmail.com" class="btn-contact-sm btn-email">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="fade-in-section">
+    <h2>Therapy Investment Tiers</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Online Consultation</h3>
+        <div class="price-amount">₹1,500 <span>/ hr</span></div>
+        <ul class="price-features">
+          <li>Secure encrypted video session</li>
+          <li>Cognitive Behavior Assessment</li>
+          <li>Digital Session Summaries</li>
+        </ul>
+        <a href="#contact" class="btn-select-plan">Book Session</a>
+      </div>
+      <div class="price-card featured">
+        <span class="badge">Popular</span>
+        <h3>Hybrid Therapy</h3>
+        <div class="price-amount">₹3,500 <span>/ mo</span></div>
+        <ul class="price-features">
+          <li>2 In-clinic + 2 Online sessions</li>
+          <li>Weekly behavioral goals tracking</li>
+          <li>Tailored psychological homework</li>
+        </ul>
+        <a href="#contact" class="btn-select-plan">Select Hybrid Plan</a>
+      </div>
+      <div class="price-card">
+        <h3>Intensive Psychoanalysis</h3>
+        <div class="price-amount">₹5,000 <span>/ mo</span></div>
+        <ul class="price-features">
+          <li>Unlimited text check-ins</li>
+          <li>Deep behavioral modification plan</li>
+          <li>Priority emergency scheduling</li>
+        </ul>
+        <a href="#contact" class="btn-select-plan">Select Intensive</a>
+      </div>
+    </div>
+
+    <div class="demo-meet-card">
+      <h3>Ready to Begin Your Healing Journey?</h3>
+      <p style="margin-bottom: 1.8rem; opacity: 0.95;">Secure your online video appointment or book an in-clinic consultation in Lucknow.</p>
+      <a href="https://meet.google.com/new" target="_blank" class="btn-meet">Launch Virtual Session Room</a>
+    </div>
+  </section>
+
+  <!-- Patient Reviews Section -->
+  <section id="reviews" class="fade-in-section">
+    <h2>Client Testimonials</h2>
+    <div class="grid" id="reviewsGrid">
+      <div class="card">
+        <h3>"Life-Changing Perspective"</h3>
+        <p class="date">Verified Client - Online Therapy</p>
+        <p>"Aryan's structured approach helped me identify cognitive traps I was stuck in for years. Highly professional and compassionate."</p>
+      </div>
+      <div class="card">
+        <h3>"Exceptional In-Clinic Care"</h3>
+        <p class="date">Verified Client - Lucknow</p>
+        <p>"The environment is peaceful and safe. The behavioral modification techniques gave me practical tools to manage anxiety daily."</p>
+      </div>
+      <div class="card">
+        <h3>"Practical &amp; Insightful"</h3>
+        <p class="date">Verified Client - Hybrid Plan</p>
+        <p>"Combining online check-ins with in-person sessions kept me accountable and made recovery steady and achievable."</p>
+      </div>
+    </div>
+
+    <!-- Review Form CTA for Guests -->
+    <div id="reviewLoginPrompt" style="margin-top: 2rem; text-align: center; padding: 2rem; background: var(--card-bg); border: 1.5px dashed var(--border-color); border-radius: 16px; backdrop-filter: blur(8px);">
+      <p style="color: var(--text-main); font-weight: 600; margin-bottom: 1rem;">Have you had a session with our team? Sign in to your client account to submit a review.</p>
+      <button class="btn-auth btn-signin" onclick="toggleLoginPanel()" style="display: inline-block;">Client Sign In to Review</button>
+    </div>
+
+    <!-- Interactive Review Form (Exclusively shown when user is signed in) -->
+    <div id="reviewSubmissionWrapper" style="display: none; margin-top: 3rem; background: #FFFFFF; border: 1.5px solid var(--border-color); border-radius: 18px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+      <h3 style="color: var(--teal-accent); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Leave Your Review</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.4rem;">Share your experience with other prospective clients.</p>
+      <form id="reviewSubmissionForm">
+        <div style="margin-bottom: 1.2rem;">
+          <label class="input-label">Review Headline</label>
+          <input type="text" id="reviewTitle" placeholder="e.g., Wonderful support system" required>
+        </div>
+        <div style="margin-bottom: 1.2rem;">
+          <label class="input-label">Your Feedback</label>
+          <textarea id="reviewText" rows="3" placeholder="Write your experience here..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Publish Review</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Intake Form -->
+  <section id="contact" class="fade-in-section">
+    <h2>Patient Intake & Consultation Request</h2>
+    <div class="form-wrapper">
+      <form id="intakeForm" action="https://formsubmit.co/therapyonthedot101@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-grid">
+          <div><label class="input-label">Full Name</label><input type="text" name="Patient Name" required></div>
+          <div><label class="input-label">Contact Number</label><input type="tel" name="Phone Number" required></div>
+          <div><label class="input-label">Email Address</label><input type="email" name="Email" required></div>
+          <div><label class="input-label">Session Type</label>
+            <select name="Session Type">
+              <option value="Online">Online Consultation</option>
+              <option value="In-Clinic">Offline In-Clinic</option>
+              <option value="Hybrid">Hybrid Therapy</option>
+            </select>
+          </div>
+          <div class="form-group-full"><label class="input-label">Primary Concerns</label><textarea name="Concerns" rows="4" required></textarea></div>
+          <div class="form-group-full"><button type="submit" style="width:100%;">Submit Request</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 2-Column Split Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="brand-container">
+          <svg class="logo-img" viewBox="0 0 100 100" fill="none">
+            <path d="M50 85 C30 85 20 65 25 45 C35 55 45 65 50 85 Z" fill="#2C5E58" opacity="0.85"/>
+            <path d="M50 85 C70 85 80 65 75 45 C65 55 55 65 50 85 Z" fill="#2C5E58" opacity="0.85"/>
+            <path d="M50 85 C35 60 30 35 45 20 C50 35 52 55 50 85 Z" fill="#7A698D" opacity="0.9"/>
+          </svg>
+          <div class="brand-text">
+            <div class="website-name" style="color:var(--teal-accent);">IKIBLOOM</div>
+            <div class="tagline">Psychotherapy & Counselling</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Professional mental health counselling, systematic cognitive behavioral modifications, and clinical psychoanalysis based in Lucknow.
+        </p>
+        <ul class="footer-nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="linkedin.html">LinkedIn</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="client-profile.html">Client Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h3>Contact Information</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <strong>Name</strong>
+            <span>IKIBLOOM Clinical Team</span>
+          </li>
+          <li class="footer-contact-item">
+            <strong>Email</strong>
+            <a href="mailto:therapyonthedot101@gmail.com">therapyonthedot101@gmail.com</a>
+          </li>
+          <li class="footer-contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+917897891395">+91 7897891395</a>
+          </li>
+          <li class="footer-contact-item">
+            <strong>Address</strong>
+            <span>Lucknow, Uttar Pradesh, India</span>
+          </li>
+        </ul>
+
+        <div class="footer-social-links">
+          <a href="https://wa.me/917897891395" target="_blank" rel="noopener noreferrer" class="footer-social-btn footer-btn-wa">
+            WhatsApp Chat
+          </a>
+          <a href="linkedin.html" class="footer-social-btn footer-btn-li">
+            LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions (WhatsApp & AI Chat) -->
+  <div class="floating-container">
+    <button class="float-btn float-ai" onclick="toggleAIChat()" title="Chat with IKIBLOOM AI" aria-label="AI Help Chat">
+      <span class="ai-badge-pulse"></span>
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M50 85 C30 85 20 65 25 45 C35 55 45 65 50 85 Z" fill="#FFFDD0" opacity="0.9"/>
+        <path d="M50 85 C70 85 80 65 75 45 C65 55 55 65 50 85 Z" fill="#FFFDD0" opacity="0.9"/>
+        <path d="M50 85 C35 60 30 35 45 20 C50 35 52 55 50 85 Z" fill="#7A698D" opacity="0.95"/>
+      </svg>
+    </button>
+
+    <a href="https://wa.me/917897891395" target="_blank" rel="noopener noreferrer" class="float-btn float-whatsapp" title="Chat on WhatsApp" aria-label="WhatsApp Contact">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.031 2C6.516 2 2 6.516 2 12.031C2 13.805 2.469 15.485 3.289 16.969L2 22L7.156 20.734C8.609 21.516 10.266 21.969 12.031 21.969C17.547 21.969 22.063 17.453 22.063 12.031C22.063 6.516 17.547 2 12.031 2ZM12.031 20.281C10.516 20.281 9.078 19.859 7.828 19.109L7.516 18.922L4.453 19.672L5.219 16.688L5.016 16.375C4.203 15.078 3.75 13.594 3.75 12.031C3.75 7.469 7.469 3.75 12.031 3.75C16.594 3.75 20.313 7.469 20.313 12.031C20.313 16.594 16.594 20.281 12.031 20.281ZM16.563 14.594C16.313 14.469 15.094 13.875 14.859 13.781C14.641 13.703 14.484 13.656 14.328 13.906C14.172 14.156 13.719 14.688 13.578 14.844C13.438 15 13.297 15.016 13.047 14.891C12.797 14.766 11.984 14.5 11.031 13.656C10.281 12.984 9.781 12.156 9.641 11.906C9.5 11.656 9.625 11.531 9.75 11.406C9.859 11.297 10 11.125 10.125 10.984C10.25 10.844 10.297 10.734 10.375 10.578C10.453 10.422 10.406 10.281 10.344 10.156C10.281 10.031 9.828 8.906 9.641 8.438C9.453 7.984 9.266 8.047 9.125 8.031C8.984 8.031 8.828 8.031 8.672 8.031C8.516 8.031 8.266 8.094 8.047 8.328C7.828 8.563 7.219 9.141 7.219 10.313C7.219 11.484 8.078 12.609 8.203 12.766C8.328 12.922 9.891 15.344 12.313 16.391C12.891 16.641 13.344 16.797 13.688 16.906C14.266 17.094 14.797 17.063 15.219 17C15.688 16.938 16.641 16.422 16.844 15.859C17.047 15.297 17.047 14.813 16.984 14.719C16.922 14.625 16.781 14.594 16.563 14.594Z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Interactive AI Help Chat Widget -->
+  <div class="ai-chat-card" id="aiChatCard">
+    <div class="ai-chat-header">
+      <div class="ai-header-brand">
+        <div class="ai-header-logo">
+          <svg viewBox="0 0 100 100" fill="none" style="width: 22px; height: 22px;">
+            <path d="M50 85 C30 85 20 65 25 45 C35 55 45 65 50 85 Z" fill="#2C5E58"/>
+            <path d="M50 85 C70 85 80 65 75 45 C65 55 55 65 50 85 Z" fill="#2C5E58"/>
+            <path d="M50 85 C35 60 30 35 45 20 C50 35 52 55 50 85 Z" fill="#7A698D"/>
+          </svg>
+        </div>
+        <div class="ai-header-info">
+          <h4>IKIBLOOM Assistant</h4>
+          <span>Online • Clinical Guide</span>
+        </div>
+      </div>
+      <button class="ai-close-btn" onclick="toggleAIChat()">&times;</button>
+    </div>
+    
+    <div class="ai-chat-messages" id="aiChatMessages">
+      <div class="ai-msg bot">
+        Hello! I'm the IKIBLOOM virtual assistant. How can I help you regarding our therapy sessions, therapists, or consultation bookings today?
+      </div>
+    </div>
+
+    <form class="ai-chat-input-row" onsubmit="handleAIChatSubmit(event)">
+      <input type="text" id="aiChatInput" placeholder="Ask about fees, sessions, therapists..." autocomplete="off" required>
+      <button type="submit" class="ai-send-btn">Send</button>
+    </form>
+  </div>
+
+  <!-- Firebase Authentication Setup -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+    import { 
+      getAuth, 
+      createUserWithEmailAndPassword, 
+      signInWithEmailAndPassword, 
+      updateProfile, 
+      signOut, 
+      onAuthStateChanged 
+    } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCqtg7A2K1jmlgPTFy4c8BfGjgmLgEWdfI",
+      authDomain: "ikibloom.firebaseapp.com",
+      databaseURL: "https://ikibloom-default-rtdb.firebaseio.com",
+      projectId: "ikibloom",
+      storageBucket: "ikibloom.firebasestorage.app",
+      messagingSenderId: "535215881193",
+      appId: "1:535215881193:web:8728a6623959c85af8a978",
+      measurementId: "G-Q6WGK61MW3"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Track state across authentication events
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const displayName = user.displayName || user.email.split('@')[0];
+        updateUIForLoggedInUser(displayName, user.email);
+      } else {
+        updateUIForLoggedOutUser();
+      }
+      loadCustomReviews();
+    });
+
+    // Sign Up Handler
+    const signUpForm = document.getElementById('signUpForm');
+    if (signUpForm) {
+      signUpForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('regName').value.trim();
+        const email = document.getElementById('regEmail').value.trim();
+        const password = document.getElementById('regPassword').value;
+
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          await updateProfile(userCredential.user, { displayName: name });
+          alert("Account created successfully! Welcome to IKIBLOOM.");
+          closeAllModals();
+          window.location.href = 'client-profile.html';
+        } catch (error) {
+          alert(`Sign Up Error: ${error.message}`);
+        }
+      });
+    }
+
+    // Sign In Handler
+    const signInForm = document.getElementById('signInForm');
+    if (signInForm) {
+      signInForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          alert("Signed in successfully.");
+          closeAllModals();
+          window.location.href = 'client-profile.html';
+        } catch (error) {
+          alert(`Sign In Error: ${error.message}`);
+        }
+      });
+    }
+
+    // Sign Out Handler
+    window.handleLogout = async function() {
+      try {
+        await signOut(auth);
+        alert("Logged out successfully.");
+        window.location.reload();
+      } catch (error) {
+        alert(`Logout Error: ${error.message}`);
+      }
+    };
+
+    // Review Submission
+    const reviewFormElement = document.getElementById('reviewSubmissionForm');
+    if (reviewFormElement) {
+      reviewFormElement.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('reviewTitle').value;
+        const text = document.getElementById('reviewText').value;
+        const currentUser = auth.currentUser;
+        const author = currentUser ? (currentUser.displayName || currentUser.email) : "Verified Client";
+
+        const newReview = { title, text, author, date: "Just now" };
+        let savedReviews = JSON.parse(localStorage.getItem("ikibloom_custom_reviews") || "[]");
+        savedReviews.push(newReview);
+        localStorage.setItem("ikibloom_custom_reviews", JSON.stringify(savedReviews));
+
+        alert("Thank you! Your review has been posted successfully.");
+        document.getElementById('reviewTitle').value = '';
+        document.getElementById('reviewText').value = '';
+        loadCustomReviews();
+      });
+    }
+
+    function updateUIForLoggedInUser(name, email) {
+      const authNavItem = document.getElementById('authNavItem');
+      if (authNavItem) {
+        authNavItem.innerHTML = `
+          <a href="client-profile.html" class="login-btn" style="background:var(--teal-accent); color:#FFFDD0;">Client Dashboard</a>
+          <a href="javascript:void(0)" onclick="handleLogout()" style="font-size:0.8rem; margin-left:10px; color:var(--text-main); font-weight:700;">Log Out</a>
+        `;
+      }
+
+      const profileAuthContainer = document.getElementById('profileAuthContainer');
+      if (profileAuthContainer) {
+        profileAuthContainer.innerHTML = `
+          <h4>Welcome back, ${name}!</h4>
+          <p style="color:var(--text-main);">Signed in as: <strong>${email}</strong></p>
+          <div class="profile-auth-btns">
+            <a href="client-profile.html" class="btn-auth btn-signup" style="text-align:center;">Open Dashboard</a>
+            <button class="btn-auth btn-signin" onclick="handleLogout()">Log Out</button>
+          </div>
+        `;
+      }
+
+      const reviewForm = document.getElementById('reviewSubmissionWrapper');
+      const reviewPrompt = document.getElementById('reviewLoginPrompt');
+      if (reviewForm) reviewForm.style.display = 'block';
+      if (reviewPrompt) reviewPrompt.style.display = 'none';
+    }
+
+    function updateUIForLoggedOutUser() {
+      const authNavItem = document.getElementById('authNavItem');
+      if (authNavItem) {
+        authNavItem.innerHTML = `<a href="javascript:void(0)" onclick="toggleLoginPanel()" class="login-btn">Client Portal</a>`;
+      }
+
+      const profileAuthContainer = document.getElementById('profileAuthContainer');
+      if (profileAuthContainer) {
+        profileAuthContainer.innerHTML = `
+          <h4>Client Portal Access</h4>
+          <p>Register or sign in to track your appointments and access personalized session notes.</p>
+          <div class="profile-auth-btns">
+            <button class="btn-auth btn-signup" onclick="toggleSignUpPanel()">Sign Up</button>
+            <button class="btn-auth btn-signin" onclick="toggleLoginPanel()">Sign In</button>
+          </div>
+        `;
+      }
+
+      const reviewForm = document.getElementById('reviewSubmissionWrapper');
+      const reviewPrompt = document.getElementById('reviewLoginPrompt');
+      if (reviewForm) reviewForm.style.display = 'none';
+      if (reviewPrompt) reviewPrompt.style.display = 'block';
+    }
+  </script>
+
+  <!-- Interactive UI Elements -->
+  <script>
+    // Responsive Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+    }
+
+    function loadCustomReviews() {
+      const savedReviews = JSON.parse(localStorage.getItem("ikibloom_custom_reviews") || "[]");
+      const grid = document.getElementById('reviewsGrid');
+      
+      const dynamicReviews = grid.querySelectorAll('.dynamic-review-card');
+      dynamicReviews.forEach(el => el.remove());
+
+      savedReviews.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'card dynamic-review-card';
+        card.innerHTML = `
+          <h3>"${r.title}"</h3>
+          <p class="date">Verified Client (${r.author}) - ${r.date}</p>
+          <p>"${r.text}"</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Gallery Slider Controls
+    let currentSlide = 0;
+    const slidesContainer = document.getElementById('gallerySlider');
+    const dots = document.querySelectorAll('.gallery-dot');
+    const totalSlides = 4;
+
+    function setSlide(index) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      if (slidesContainer) {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 25}%)`;
+      }
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+    }
+
+    function nextSlide() { setSlide(currentSlide + 1); }
+    function prevSlide() { setSlide(currentSlide - 1); }
+
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    const sliderContainer = document.querySelector('.gallery-slider-container');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      sliderContainer.addEventListener('mouseleave', () => {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+      });
+    }
+
+    // Drawer and Modal Controls
+    const loginPanel = document.getElementById('loginPanel');
+    const signUpPanel = document.getElementById('signUpPanel');
+    const panelOverlay = document.getElementById('panelOverlay');
+
+    function toggleLoginPanel() { signUpPanel.classList.remove('active'); loginPanel.classList.toggle('active'); panelOverlay.classList.toggle('active'); }
+    function toggleSignUpPanel() { loginPanel.classList.remove('active'); signUpPanel.classList.toggle('active'); panelOverlay.classList.toggle('active'); }
+    function switchToSignUp() { loginPanel.classList.remove('active'); signUpPanel.classList.add('active'); }
+    function switchToSignIn() { signUpPanel.classList.remove('active'); loginPanel.classList.add('active'); }
+    function closeAllModals() { loginPanel.classList.remove('active'); signUpPanel.classList.remove('active'); panelOverlay.classList.remove('active'); }
+
+    // AI Chat System
+    function toggleAIChat() {
+      const chatCard = document.getElementById('aiChatCard');
+      chatCard.classList.toggle('open');
+      if (chatCard.classList.contains('open')) {
+        document.getElementById('aiChatInput').focus();
+      }
+    }
+
+    function handleAIChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('aiChatInput');
+      const message = input.value.trim();
+      if (!message) return;
+
+      const chatContainer = document.getElementById('aiChatMessages');
+
+      const userMsg = document.createElement('div');
+      userMsg.className = 'ai-msg user';
+      userMsg.textContent = message;
+      chatContainer.appendChild(userMsg);
+      input.value = '';
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      setTimeout(() => {
+        const botMsg = document.createElement('div');
+        botMsg.className = 'ai-msg bot';
+
+        const lower = message.toLowerCase();
+        if (lower.includes('price') || lower.includes('fee') || lower.includes('cost') || lower.includes('pricing')) {
+          botMsg.textContent = "Our pricing starts at ₹1,500/hr for Online Consultations, ₹3,500/mo for Hybrid Therapy, and ₹5,000/mo for Intensive Psychoanalysis. Check out our Pricing section for details!";
+        } else if (lower.includes('therapist') || lower.includes('doctor') || lower.includes('team') || lower.includes('aryan')) {
+          botMsg.textContent = "Our clinical team includes Aryan Khare (Lead Specialist), Dr. Sneha Verma (Senior Clinical Psychologist), Rohan Kapoor (Addiction & Behaviour Counsellor), and Ananya Sharma (Counseling Psychologist).";
+        } else if (lower.includes('book') || lower.includes('appointment') || lower.includes('contact')) {
+          botMsg.textContent = "You can schedule a session directly using our Patient Intake Form below, or reach out to us instantly via WhatsApp at +91 7897891395.";
+        } else if (lower.includes('lucknow') || lower.includes('clinic') || lower.includes('offline') || lower.includes('location')) {
+          botMsg.textContent = "We provide in-clinic sessions in Lucknow as well as convenient online encrypted video consultations globally.";
+        } else {
+          botMsg.textContent = "Thank you for reaching out! You can fill out our consultation request form below or connect directly with our team on WhatsApp (+91 7897891395) for prompt support.";
+        }
+
+        chatContainer.appendChild(botMsg);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }, 500);
+    }
+
+    // Scroll Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>

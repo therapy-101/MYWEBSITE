@@ -1,0 +1,10 @@
+{
+  "name": "ikibloom-backend",
+  "version": "1.0.0",
+  "description": "IKIBLOOM backend serverless functions for Vercel",
+  "main": "api/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
